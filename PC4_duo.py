@@ -54,7 +54,7 @@ if opciones == 'Nosotras':
         
 elif  opciones == 'Experiencia':
 
-    st.markdown("<h1 style='text-align: center; font-size: 50 px; color: black'>Nuestro paso por la programación 💻</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 50 px; color: #F3D2AF'>Nuestro paso por la programación 💻</h1>", unsafe_allow_html=True)
 
     # Alumno a
     texto_3 = """
@@ -116,7 +116,7 @@ elif  opciones == 'Experiencia':
             
 else:
 
-    st.markdown("<h1 style='text-align: center;font-size: 50 px; color: black'>Visualización de nuestros gráficos</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;font-size: 50 px; color: #F3D2AF'>Visualización de nuestros gráficos</h1>", unsafe_allow_html=True)
     
     # Aquí todos los integrantes deben poner sus 3 gráficos y su mapa en la lista 
     # y aumentar la estructura condicional como sea necesaria
