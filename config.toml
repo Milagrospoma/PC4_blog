@@ -2,6 +2,6 @@
 primaryColor = "#F7D1CD" 
 backgroundColor = "#E8C2CA"
 secondaryBackgroundColor = "#D1B3C4" 
-font = "monospace"
-codeFont = ""
+font = "sans serif"
+codeFont = "monospace"
 textColor = "#18E13A"
