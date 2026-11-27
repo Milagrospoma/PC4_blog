@@ -255,7 +255,10 @@ else:
         
         st.subheader("🗺️ Mapa de Milagros: Distribución geográfica")
         texto_8 = """
-        Interpretación del mapa
+        Para crear el mapa donde se aprecian a los dos competidores, se utilizó la libreria folium. Luego creé el mapa base centrado en las coordenadas. Definí un diccionario 
+        (colores_pilotos) para asignar un color específico a cada piloto. Tras validar que existieran coordenadas geográficas válidas construí el contenido HTML 
+        de la ventana emergente mostrando el nombre y el puntaje total, e incluyendo la fotografía de los conductores. Finalmente, asigné el color correspondiente a cada piloto.
+        Guardé el resultado como mapa.html y mostré el mapa interactivo.
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_8}</div>", unsafe_allow_html=True)
             
