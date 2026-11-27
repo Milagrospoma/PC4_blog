@@ -107,7 +107,7 @@ elif  opciones == 'Experiencia':
     with col2:
         st.link_button("🎥 Operadores booleanos",
                        "https://drive.google.com/file/d/147ePEFqhPhGjyVE2Bh83zMfzA9fsdiYa/view?usp=sharing",
-                       use_container_width=True
+                       use_container_width=True)
     # Formato Google Drive
     st.subheader("🎥 Mi segundo video de programación")
     
