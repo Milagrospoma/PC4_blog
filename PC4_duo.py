@@ -164,7 +164,6 @@ else:
         with col2:
             st.image("histogramas_anapaula.png", width=800)
 
-    elif grafico_seleccionado == 'Histograma':
         st.subheader("📊 Histogramas de Milagros")
         texto_6 = """
         Ambos gráficos muestran el rendimiento de goles del Rayo Vallecano en 19 partidos como local y 19 como visitante. 
