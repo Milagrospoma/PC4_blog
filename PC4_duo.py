@@ -100,17 +100,22 @@ elif  opciones == 'Experiencia':
     st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_4}</div>", unsafe_allow_html=True)
         
     # Formato YouTube
-    st.subheader("🎥 Título apropiado video 1")
-    st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
-        
+    st.subheader("🎥 Mi primer video de programación")
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.link_button("🎥 Operadores booleanos",
+                       "https://drive.google.com/file/d/147ePEFqhPhGjyVE2Bh83zMfzA9fsdiYa/view?usp=sharing",
+                       use_container_width=True
     # Formato Google Drive
-    st.subheader("🎥 Título apropiado video 2")
+    st.subheader("🎥 Mi segundo video de programación")
     
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col2:  
-        st.link_button("🎥 Texto del botón",
-                       "https://drive.google.com/file/d/1REvRXSu3GuGD73w8j44135MkRiezd0gP/view?usp=drive_link",
+        st.link_button("🎥 Estructuras condicionales",
+                       "https://drive.google.com/file/d/1k2NC_TWh_BpckJ1r5aLytTAIFyUV6ujg/view?usp=drive_link",
                        use_container_width=True
              )
             
