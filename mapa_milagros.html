@@ -1,1 +1,103 @@
+<!DOCTYPE html >
+<html> 
+<head>
 
+import folium
+
+
+# Crear el mapa
+mapa = folium.Map(
+    location=[30, 0],
+    zoom_start=2,
+    tiles=None,
+    control_scale=True
+)
+
+# Agregar capa de OpenStreetMap
+folium.TileLayer(
+    tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attr=(
+        '&copy; <a href="https://www.openstreetmap.org/copyright">'
+        'OpenStreetMap contributors</a> '
+        '| Datos bajo licencia '
+        '<a href="https://opendatacommons.org/licenses/odbl/">ODbL</a>'
+    ),
+    name="OpenStreetMap",
+    overlay=False,
+    control=True,
+    referrer_policy="strict-origin"
+).add_to(mapa)
+
+
+# Definir colores para cada piloto
+colores_pilotos = {
+    "D. RICCIARDO": "green",
+    "L. HAMILTON": "blue"
+}
+
+
+# Recorrer el DataFrame
+for elemento, fila in df_pilotos.iterrows():
+
+    piloto = fila["Piloto"]
+    escuderia = fila["escuderia"]
+    imagen = fila["imagen_url"]
+    lat = fila["Latitud"]
+    lon = fila["Longitud"]
+    puntaje = fila["puntaje total"]
+
+    # Verificar que existan coordenadas
+    if pd.notna(lat) and pd.notna(lon):
+
+        # Construir el contenido del popup
+        if pd.notna(imagen) and imagen != "":
+
+            contenido = f"""
+            <div style="text-align:center; width:200px;">
+
+                <img src="{imagen}"
+                     width="150"
+                     height="120"
+                     style="object-fit:cover; border-radius:50%;">
+
+                <h3>{piloto}</h3>
+
+                <p><b>Escudería:</b> {escuderia}</p>
+
+                <p><b>Puntaje total:</b> {puntaje}</p>
+
+            </div>
+            """
+
+        else:
+
+            contenido = f"""
+            <div style="text-align:center; width:200px;">
+
+                <h3>{piloto}</h3>
+
+                <p><b>Escudería:</b> {escuderia}</p>
+
+                <p><b>Puntaje total:</b> {puntaje}</p>
+
+            </div>
+            """
+
+        # Obtener el color del piloto
+        color = colores_pilotos.get(piloto, "orange")
+
+        # Agregar marcador
+        folium.Marker(
+            location=[lat, lon],
+            popup=folium.Popup(contenido, max_width=300),
+            tooltip=piloto,
+            icon=folium.Icon(
+                color=color,
+                icon="star",
+                prefix="fa"
+            )
+        ).add_to(mapa)
+
+
+mapa.save("mapa.html")
+mapa
