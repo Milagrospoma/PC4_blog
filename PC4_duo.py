@@ -40,20 +40,18 @@ if opciones == 'Nosotras':
 
     # Alumno b
     col1, col2 = st.columns(2)
+
+    col2.image("imagen_milagros.jpeg", caption='@mincitw_ | m.poma@pucp.edu.pe', width=250)
     
     texto_2 = """
-    Aquí escribe una presentación creativa sobre ti.
-    ¿Quién eres? 
-    ¿De dónde eres? 
-    ¿Qué estudias? 
-    ¿Qué te gusta de tu carrera? 
-    ¿Qué te gustaría hacer en el futuro? 
-    ¿Qué te gusta hacer en tu tiempo libre?
+    ¡Hola! Me llamo Milagros, soy estudiante de Comunicación Audiovisual de sexto ciclo. 
+    Soy bastante apasionada a mi carrera y siempre me gusta estar apoyando en rodajes. En mis tiempos libres leo, veo películas o escucho podcasts. 
+    Si es que tengo mayor tiempo libre usualmente voy a ferias de artistas gráficos independientes. 
+    Mi cantante favorita es Olivia Dean. Mi plato favorito es el ceviche y me gustan mucho los dulces, de hecho siempre pido cancha dulce cuando voy al cine. 
+    Tambien me interesa los temas de memoria y activismo político por lo que aspiro a crear piezas audiovisual así. 
     """
     col1.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto_2}</div>", unsafe_allow_html=True)
-    
-    col2.image("ellie.png", caption='Ellie', width=300)
-    
+        
 elif  opciones == 'Experiencia':
 
     st.markdown("<h1 style='text-align: center; font-size: 50 px; color: black'>Nuestro paso por la programación 💻</h1>", unsafe_allow_html=True)
@@ -93,11 +91,11 @@ elif  opciones == 'Experiencia':
 
     # Alumno b
     texto_4 = """
-    Aquí escribe tu experiencia aprendiendo a programar. 
-    ¿Cómo te sentiste al principio?
-    ¿Qué te ha enseñado la programación?
-    ¿Qué te gusta de programar? 
-    ¿Qué te gustaría hacer con la programación en el futuro?
+    Es la primera vez que aprendo a programar, si bien ya sabia de la existencia de phyton por otros amigos de ciclos superiores, no me atrevia a aprender a programar. 
+    Sentí que iba a ser muy dificil debido a las funciones, y sobre todo porque la mayoria esta en ingles. 
+    La programación me ha ayudado a comprender que se pueden crear páginas y establecer reglas o condiciones. 
+    Me gusta que en realidad no es algo difícil y me puede ayudar a realizar proyectos que sirvan a la comunidad universitaria. 
+    A partir de ello, me gustaria realizar mi portafolio audiovisual y paginás web que recolecten las demandas de los estudiantes según facultad. 
     """
     st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_4}</div>", unsafe_allow_html=True)
         
@@ -140,7 +138,10 @@ else:
 
         st.subheader("📊 Gráfico de barras de Milagros")
         texto_6 = """
-        Interpretación del Gráfico 1
+        El gráfico muestra el promedio de tarjetas amarillas que recibe cada equipo jugando como visitante, dividiéndolos estrictamente en dos grupos. 
+        Por un lado, Villarreal, Vallecano, Sociedad, Sevilla, Getafe, Español y Alavés lideran como los más amonestados con poco más de 3 tarjetas por partido. 
+        Por otro lado, los trece equipos restantes (incluyendo a Real Madrid, Barcelona y Valencia) se mantienen todos en un mismo nivel inferior, promediando justo por encima de las 2 tarjetas. 
+        El hecho de que existan solo dos valores exactos sugiere que los datos provienen de una muestra muy pequeña, probablemente de un único encuentro por equipo.
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_6}</div>", unsafe_allow_html=True)
     
@@ -166,13 +167,15 @@ else:
     elif grafico_seleccionado == 'Histograma':
         st.subheader("📊 Histogramas de Milagros")
         texto_6 = """
-        Interpretación del Gráfico 2.
+        Ambos gráficos muestran el rendimiento de goles del Rayo Vallecano en 19 partidos como local y 19 como visitante. 
+        El histograma superior indica que, jugando en casa, lo más habitual es anotar exactamente 1 gol (en 11 encuentros), sin superar nunca los 3 tantos. 
+        El gráfico inferior revela que, fuera de casa, el escenario más frecuente también es recibir 1 gol (en 8 ocasiones), aunque muestra mayor vulnerabilidad al llegar a encajar hasta 3 o 4 goles en varios partidos.
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_6}</div>", unsafe_allow_html=True)
     
         col1, col2, col3 = st.columns([1, 7, 1])
         with col2:
-            st.image("histogramas_anapaula.png", width=800)
+            st.image("histograma_milagros.png", width=800)
    
     elif grafico_seleccionado == 'Piechart':
         st.subheader("📊 Gráfico de Pastel by Anapaula")
@@ -191,13 +194,15 @@ else:
     elif grafico_seleccionado == 'Piechart':
         st.subheader("📊 Gráfico de Pastel de Milagros")
         texto_7 = """
-        Interpretación del Gráfico 2
+        El gráfico muestra que el Rayo Vallecano es un equipo muy difícil de vencer en casa, aunque con fuerte tendencia a repartir puntos. 
+        Más de la mitad de los partidos del Rayo Vallecano como local terminan en empate (52.6 %), mientras que gana el 36.8 % y apenas pierde el 10.5 % restante. 
+        En síntesis, logra sumar puntos en casi 9 de cada 10 encuentros disputados en su estadio.
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_7}</div>", unsafe_allow_html=True)
     
         col1, col2, col3 = st.columns([1, 7, 1])
         with col2:
-            st.image("wordcloud_anapaula.png", width=800)
+            st.image("piechart_milagros.png", width=800)
             
     elif grafico_seleccionado == 'Wordcloud':
         st.subheader("📊 Nube de palabras Anapaula")
@@ -219,13 +224,15 @@ else:
     elif grafico_seleccionado == 'Wordcloud':
         st.subheader("📊 Nube de palabras Milagros")
         texto_7 = """
-        Interpretación del wordcloud
+        Esta nube de palabras muestra los términos que aparecen con mayor frecuencia en el texto, destacando en mayor tamaño palabras clave como gente, todo, pasado, tiempo y yo. 
+        El vocabulario refleja una narración introspectiva en primera persona centrada en la memoria, el recuerdo y la reflexión sobre las personas y el paso del tiempo, 
+        e incluye nombres propios como Juan, Pablo, Castel, Iribarne y María (que corresponden a los personajes de la novela El túnel de Ernesto Sabato) junto con términos como pintor, mató y verdad
         """
         st.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_7}</div>", unsafe_allow_html=True)
     
         col1, col2, col3 = st.columns([1, 7, 1])
         with col2:
-            st.image("wordcloud_anapaula.png", width=800)
+            st.image("wordcloud_milagros.png", width=800)
     
     else:
         st.subheader("🗺️ Mapa de Anapaula: Distribución geográfica")
