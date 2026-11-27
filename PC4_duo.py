@@ -190,7 +190,6 @@ else:
         with col2:
             st.image("piechart_anapaula.png", width=800)
 
-    elif grafico_seleccionado == 'Piechart':
         st.subheader("📊 Gráfico de Pastel de Milagros")
         texto_7 = """
         El gráfico muestra que el Rayo Vallecano es un equipo muy difícil de vencer en casa, aunque con fuerte tendencia a repartir puntos. 
@@ -220,7 +219,6 @@ else:
         with col2:
             st.image("wordcloud_anapaula.png", width=800)
 
-    elif grafico_seleccionado == 'Wordcloud':
         st.subheader("📊 Nube de palabras Milagros")
         texto_7 = """
         Esta nube de palabras muestra los términos que aparecen con mayor frecuencia en el texto, destacando en mayor tamaño palabras clave como gente, todo, pasado, tiempo y yo. 
